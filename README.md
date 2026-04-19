@@ -54,9 +54,7 @@ A large current pulse signals a polarisation reversal (bit switch); a small puls
 | Oxide thickness | $d$ | 10 nm | 5–20 nm |
 | Coercive voltage | $V_c = E_c \cdot d$ | 1.5 V | — |
 | Curie temperature | $T_c$ | 450 K | 400–500 K |
-
 ---
-
 ## Simulation
 
 ### Figure 1 — Landau Free Energy and P-E Hysteresis
@@ -68,9 +66,7 @@ A large current pulse signals a polarisation reversal (bit switch); a small puls
 **Left:** The double-well free energy $G(P)$ for three field values. At $E = 0$ both minima $\pm P_r$ are equally stable (the two memory states). Applying $E > E_c$ tilts the well and stabilises only $+P_r$ (write "1"); $E < -E_c$ stabilises only $-P_r$ (write "0").
 
 **Right:** The simulated P-E hysteresis loop obtained by integrating the Landau-Khalatnikov equation under a triangular AC field. The loop is characteristic of a ferroelectric: $P$ switches sharply at $\pm E_c$ and retains the written state when the field is removed.
-
 ---
-
 ### Figure 2 — Full FRAM Cell Operation: Write → Wait → Read
 
 <p align="center">
@@ -88,9 +84,7 @@ The simulation applies a three-phase voltage sequence:
    - A cell that stored "0" has $P$ already near $-P_r$ → **small current pulse**.
 
 The read is **destructive** (as in real FRAM): a rewrite step is needed to restore the original data.
-
 ---
-
 ### Figure 3 — Ferroelectric Phase Transition $P_r(T)$
 
 <p align="center">
@@ -102,9 +96,7 @@ Above the **Curie temperature** $T_c = 450$ K the material becomes paraelectric:
 $$P_r(T) \propto \sqrt{T_c - T} \qquad (T < T_c)$$
 
 This sets the **operating temperature limit** of the FRAM cell.
-
 ---
-
 ## Requirements
 
 ```
@@ -114,9 +106,7 @@ numpy  matplotlib
 ```bash
 pip install numpy matplotlib
 ```
-
 ---
-
 ## Usage
 
 ```bash
@@ -124,17 +114,13 @@ python scripts/FRAM.py
 ```
 
 Generates and saves all three figures to `figures/`.
-
 ---
-
 ## References
 
 1. A. F. Devonshire, "Theory of barium titanate", *Phil. Mag.* **40**, 1040 (1949)
 2. L. Landau & I. Khalatnikov, *Dokl. Akad. Nauk SSSR* **96**, 469 (1954)
 3. M. Pešić et al., "Physical mechanisms behind the field-cycling behavior of HfO₂-based ferroelectric capacitors", *J. Comput. Electron.* (2017) — HfO₂ parameters
-
 ---
-
 ## Author
 
 **A. S. Amari Rabah**
