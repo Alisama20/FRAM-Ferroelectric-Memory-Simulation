@@ -4,6 +4,21 @@ Numerical simulation of a **Ferroelectric RAM (FRAM)** cell using the **Landau-D
 
 ---
 
+## Repository layout
+
+```
+.
+├── scripts/
+│   └── FRAM.py          # Self-contained simulation: hysteresis, write/read cycle, phase transition
+├── figures/              # PNG outputs
+│   ├── landau_hysteresis.png   # Free energy double-well and P-E hysteresis loop
+│   ├── fram_operation.png      # Write → Wait → Read operation
+│   └── phase_transition.png    # Remanent polarisation Pr(T) near Curie point
+└── README.md
+```
+
+---
+
 ## Physical Model
 
 ### Landau-Devonshire Free Energy
@@ -87,23 +102,6 @@ Above the **Curie temperature** $T_c = 450$ K the material becomes paraelectric:
 $$P_r(T) \propto \sqrt{T_c - T} \qquad (T < T_c)$$
 
 This sets the **operating temperature limit** of the FRAM cell.
-
----
-
-## Code Structure
-
-```
-.
-├── scripts/
-│   └── FRAM.py          # Main simulation script
-├── figures/
-│   ├── landau_hysteresis.png   # Free energy and P-E hysteresis
-│   ├── fram_operation.png      # Write → Wait → Read operation
-│   └── phase_transition.png    # Pr(T) phase transition
-└── README.md
-```
-
-The script is self-contained and parameterised at the top — all physical parameters ($P_r$, $E_c$, $d$, $T_c$) can be changed to explore different ferroelectric materials.
 
 ---
 
